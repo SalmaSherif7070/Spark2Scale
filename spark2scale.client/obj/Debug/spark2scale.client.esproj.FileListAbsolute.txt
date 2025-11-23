@@ -1,0 +1,1 @@
+C:\Users\mariam\source\repos\Spark2Scale\spark2scale.client\obj\Debug\spark2scale.client.esproj.CoreCompileInputs.cache
