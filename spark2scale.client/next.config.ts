@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 import path from "node:path";
 
-const LOADER = path.resolve(__dirname, 'src/visual-edits/component-tagger-loader.js');
-
 const nextConfig: NextConfig = {
     images: {
         remotePatterns: [
@@ -16,20 +14,13 @@ const nextConfig: NextConfig = {
             },
         ],
     },
+    // This helps Next.js find files if your project is in a subfolder
     outputFileTracingRoot: path.resolve(__dirname, '../../'),
+
     typescript: {
+        // This prevents the build from failing if there are small TS errors
         ignoreBuildErrors: true,
     },
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
-    turbopack: {
-        rules: {
-            "*.{jsx,tsx}": {
-                loaders: [LOADER]
-            }
-        }
-    }
 };
 
 export default nextConfig;
