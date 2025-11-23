@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:58068",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Users\\mariam\\source\\repos\\Spark2Scale\\Spark2Scale.Server\\..\\spark2scale.client",
+"WorkingDirectory": "C:\\Dahdouha\\Year 4 - Sem 1\\Spark2Scale\\Spark2Scale\\Spark2Scale.Server\\..\\spark2scale.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }
