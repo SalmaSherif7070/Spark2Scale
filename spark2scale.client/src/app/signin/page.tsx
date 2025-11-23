@@ -1,149 +1,153 @@
 ﻿"use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Calendar, ExternalLink, Video } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import LegoIllustration from "@/components/lego/LegoIllustration";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
-interface Meeting {
-    id: number;
-    date: string; // ISO date string
-    time: string;
-    investor: string;
-    startup: string;
-    link: string;
-    type: string;
-}
+export default function SigninPage() {
+    const router = useRouter();
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+        userType: "founder",
+    });
 
-export default function SchedulePage() {
-    const meetings: Meeting[] = [
-        {
-            id: 1,
-            date: "2024-02-15",
-            time: "10:00 AM",
-            investor: "Sarah Johnson",
-            startup: "EcoTech Solutions",
-            link: "https://meet.google.com/abc-defg-hij",
-            type: "Pitch Review",
-        },
-        {
-            id: 2,
-            date: "2024-02-16",
-            time: "2:30 PM",
-            investor: "Michael Chen",
-            startup: "HealthAI Platform",
-            link: "https://zoom.us/j/123456789",
-            type: "Follow-up Discussion",
-        },
-        {
-            id: 3,
-            date: "2024-02-18",
-            time: "11:00 AM",
-            investor: "Emily Rodriguez",
-            startup: "EcoTech Solutions",
-            link: "https://meet.google.com/xyz-abcd-efg",
-            type: "Investment Terms",
-        },
-    ];
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        // Handle signin logic
+        console.log("Signin:", formData);
+
+        // Redirect based on user type
+        if (formData.userType === "founder") {
+            router.push("/founder/dashboard");
+        } else {
+            router.push("/investor/feed");
+        }
+    };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#F0EADC] via-[#fff] to-[#FFD95D]/20">
-            {/* Top Navigation Bar */}
-            <div className="border-b bg-white/80 backdrop-blur-lg">
-                <div className="container mx-auto px-4 py-4 flex items-center gap-4">
-                    <Link href="/founder/dashboard">
-                        <Button variant="ghost" size="icon">
-                            <ArrowLeft className="h-5 w-5" />
-                        </Button>
-                    </Link>
-                    <h1 className="text-2xl font-bold text-[#576238] flex items-center gap-2">
-                        <Calendar className="h-6 w-6" />
-                        Meeting Schedule
-                    </h1>
-                </div>
-            </div>
-
-            <main className="container mx-auto px-4 py-8">
-                <div className="max-w-4xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="mb-6"
-                    >
-                        <h2 className="text-xl font-semibold text-[#576238] mb-2">Upcoming Meetings</h2>
-                        <p className="text-muted-foreground">
-                            Your scheduled investor meetings and pitch sessions
+        <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-[#F0EADC] via-[#fff] to-[#FFD95D]/20">
+            <div className="w-full max-w-6xl grid md:grid-cols-2 gap-8 items-center">
+                {/* Left side - Illustration */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="hidden md:block"
+                >
+                    <div className="text-center mb-8">
+                        <h2 className="text-4xl font-bold text-[#576238] mb-3">
+                            Welcome Back!
+                        </h2>
+                        <p className="text-lg text-muted-foreground">
+                            Continue building your success 🎯
                         </p>
-                    </motion.div>
+                    </div>
+                    <LegoIllustration />
+                </motion.div>
 
-                    {meetings.length > 0 ? (
-                        <div className="space-y-4">
-                            {meetings.map((meeting, index) => (
-                                <motion.div
-                                    key={meeting.id}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: index * 0.1 }}
+                {/* Right side - Form */}
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <Card className="shadow-xl border-2">
+                        <CardHeader className="space-y-1">
+                            <CardTitle className="text-3xl font-bold text-center">
+                                Sign In
+                            </CardTitle>
+                            <CardDescription className="text-center">
+                                Enter your credentials to continue
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <form onSubmit={handleSubmit} className="space-y-4">
+                                {/* User Type Selection */}
+                                <div className="grid grid-cols-2 gap-3">
+                                    <Button
+                                        type="button"
+                                        variant={formData.userType === "founder" ? "default" : "outline"}
+                                        className="w-full"
+                                        onClick={() => setFormData({ ...formData, userType: "founder" })}
+                                    >
+                                        🚀 Founder
+                                    </Button>
+                                    <Button
+                                        type="button"
+                                        variant={formData.userType === "investor" ? "default" : "outline"}
+                                        className="w-full"
+                                        onClick={() => setFormData({ ...formData, userType: "investor" })}
+                                    >
+                                        💼 Investor
+                                    </Button>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <Label htmlFor="email">Email</Label>
+                                    <Input
+                                        id="email"
+                                        type="email"
+                                        placeholder="john@example.com"
+                                        value={formData.email}
+                                        onChange={(e) =>
+                                            setFormData({ ...formData, email: e.target.value })
+                                        }
+                                        required
+                                    />
+                                </div>
+
+                                <div className="space-y-2">
+                                    <div className="flex items-center justify-between">
+                                        <Label htmlFor="password">Password</Label>
+                                        <Link
+                                            href="/forgot-password"
+                                            className="text-sm text-[#576238] hover:text-[#6b7c3f] hover:underline"
+                                        >
+                                            Forgot password?
+                                        </Link>
+                                    </div>
+                                    <Input
+                                        id="password"
+                                        type="password"
+                                        placeholder="••••••••"
+                                        value={formData.password}
+                                        onChange={(e) =>
+                                            setFormData({ ...formData, password: e.target.value })
+                                        }
+                                        required
+                                    />
+                                </div>
+
+                                <Button
+                                    type="submit"
+                                    className="w-full bg-[#576238] hover:bg-[#6b7c3f] text-white font-semibold"
+                                    size="lg"
                                 >
-                                    <Card className="border-2 hover:border-[#FFD95D] transition-all">
-                                        <CardHeader className="pb-3">
-                                            <CardTitle className="text-lg flex items-center justify-between">
-                                                <span className="text-[#576238]">{meeting.type}</span>
-                                                <span className="text-sm font-normal text-muted-foreground">
-                                                    {new Date(meeting.date).toLocaleDateString("en-US", {
-                                                        weekday: "short",
-                                                        month: "short",
-                                                        day: "numeric",
-                                                    })}
-                                                </span>
-                                            </CardTitle>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <div className="grid md:grid-cols-2 gap-4">
-                                                <div className="space-y-2">
-                                                    <div className="flex items-center gap-2 text-sm">
-                                                        <span className="font-semibold text-[#576238]">Investor:</span>
-                                                        <span>{meeting.investor}</span>
-                                                    </div>
-                                                    <div className="flex items-center gap-2 text-sm">
-                                                        <span className="font-semibold text-[#576238]">Startup:</span>
-                                                        <span>{meeting.startup}</span>
-                                                    </div>
-                                                    <div className="flex items-center gap-2 text-sm">
-                                                        <span className="font-semibold text-[#576238]">Time:</span>
-                                                        <span>{meeting.time}</span>
-                                                    </div>
-                                                </div>
-                                                <div className="flex items-center justify-end">
-                                                    <Button className="bg-[#576238] hover:bg-[#6b7c3f]" asChild>
-                                                        <a
-                                                            href={meeting.link}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="flex items-center"
-                                                        >
-                                                            <Video className="mr-2 h-4 w-4" />
-                                                            Join Meeting
-                                                            <ExternalLink className="ml-2 h-3 w-3" />
-                                                        </a>
-                                                    </Button>
-                                                </div>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </motion.div>
-                            ))}
-                        </div>
-                    ) : (
-                        <Card className="p-12 text-center">
-                            <div className="text-6xl mb-4">📅</div>
-                            <h3 className="text-xl font-semibold text-[#576238] mb-2">No Upcoming Meetings</h3>
-                            <p className="text-muted-foreground">Your scheduled meetings will appear here</p>
-                        </Card>
-                    )}
-                </div>
-            </main>
+                                    Sign In
+                                </Button>
+                            </form>
+                        </CardContent>
+                        <CardFooter className="flex justify-center">
+                            <p className="text-sm text-muted-foreground">
+                                Don't have an account?{" "}
+                                <Link
+                                    href="/signup"
+                                    className="text-[#576238] hover:text-[#6b7c3f] font-semibold underline-offset-4 hover:underline"
+                                >
+                                    Sign up
+                                </Link>
+                            </p>
+                        </CardFooter>
+                    </Card>
+                </motion.div>
+            </div>
         </div>
     );
 }

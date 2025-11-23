@@ -1,5 +1,9 @@
 {
   "/founder/dashboard/page": "app/founder/dashboard/page.js",
+  "/founder/startup/[d]/documents-page/page": "app/founder/startup/[d]/documents-page/page.js",
+  "/founder/startup/[d]/evaluate/page": "app/founder/startup/[d]/evaluate/page.js",
+  "/founder/startup/[d]/market-research/page": "app/founder/startup/[d]/market-research/page.js",
+  "/founder/startup/[d]/page": "app/founder/startup/[d]/page.js",
   "/page": "app/page.js",
   "/signin/page": "app/signin/page.js",
   "/signup/page": "app/signup/page.js"
