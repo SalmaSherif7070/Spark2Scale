@@ -1,0 +1,6 @@
+@Spark2Scale.Server_HostAddress = http://localhost:5202
+
+GET {{Spark2Scale.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
