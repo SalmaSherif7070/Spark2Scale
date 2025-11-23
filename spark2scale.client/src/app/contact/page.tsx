@@ -127,7 +127,7 @@ export default function ContactPage() {
 
                                         <Button
                                             type="submit"
-                                            className="w-full bg-[#576238] hover:bg-[#6b7c3f]"
+                                             className="w-full bg-[#576238] hover:bg-[#6b7c3f]"
                                             size="lg"
                                         >
                                             <Send className="mr-2 h-4 w-4" />
