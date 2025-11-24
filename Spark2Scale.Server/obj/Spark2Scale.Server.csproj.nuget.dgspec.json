@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj": {}
+    "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation2\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj": {}
   },
   "projects": {
-    "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj": {
+    "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation2\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj",
+        "projectUniqueName": "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation2\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj",
         "projectName": "Spark2Scale.Server",
-        "projectPath": "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj",
+        "projectPath": "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation2\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj",
         "packagesPath": "C:\\Users\\Doha\\.nuget\\packages\\",
-        "outputPath": "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation\\Spark2Scale\\Spark2Scale.Server\\obj\\",
+        "outputPath": "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation2\\Spark2Scale\\Spark2Scale.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

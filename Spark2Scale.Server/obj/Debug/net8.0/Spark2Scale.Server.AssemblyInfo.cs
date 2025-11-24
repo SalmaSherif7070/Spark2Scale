@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Spark2Scale.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f895197d48cc6813562d562e76e14c10cb396fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c81f24cc4116966543d6aa4f6fa6ffad1461309d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Spark2Scale.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Spark2Scale.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
