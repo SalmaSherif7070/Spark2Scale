@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:58068",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\mariam\\source\\repos\\Spark2Scale\\Spark2Scale.Server\\..\\spark2scale.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
