@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mariam\\source\\repos\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj": {}
+    "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mariam\\source\\repos\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj": {
+    "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mariam\\source\\repos\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj",
+        "projectUniqueName": "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj",
         "projectName": "Spark2Scale.Server",
-        "projectPath": "C:\\Users\\mariam\\source\\repos\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj",
-        "packagesPath": "C:\\Users\\mariam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mariam\\source\\repos\\Spark2Scale\\Spark2Scale.Server\\obj\\",
+        "projectPath": "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation\\Spark2Scale\\Spark2Scale.Server\\Spark2Scale.Server.csproj",
+        "packagesPath": "C:\\Users\\Doha\\.nuget\\packages\\",
+        "outputPath": "C:\\Dahdouha\\Year 4 - Sem 1\\Graduation\\Spark2Scale\\Spark2Scale.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mariam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Doha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
