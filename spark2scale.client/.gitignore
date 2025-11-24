@@ -61,3 +61,27 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# Dependency directories
+/node_modules
+
+# Build artifacts for React
+/build
+/dist
+/out
+
+# .NET Build artifacts
+[Bb]in/
+[Oo]bj/
+*.pdb
+*.suo
+*.user
+*.bak
+*.vspscc
+.vs/
+.vscode/
+
+# Logs and other files
+*.log
+npm-debug.log*
